@@ -1,0 +1,4214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Haziq —From Waniya❤️</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #080607;
+            color: #f7eeee;
+            font-family: "Montserrat", sans-serif;
+            overflow-x: hidden;
+        }
+
+        body.locked {
+            overflow: hidden;
+        }
+
+        button,
+        a {
+            font-family: inherit;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+
+        /* =====================================================
+           VARIABLES
+        ===================================================== */
+
+        :root {
+            --black: #080607;
+            --black2: #100a0c;
+
+            --burgundy: #531d2b;
+            --burgundy-light: #7d3345;
+
+            --gold: #c9a66b;
+            --gold-light: #ead09b;
+
+            --cream: #f7eeee;
+            --muted: #a89599;
+        }
+
+/* -------------------------------- */
+
+.memory-photo-section {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.memory-photo-section h3 {
+    font-family: cursive;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.memory-photo-section p {
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+#memoryVideo {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+
+    background: #f7ede3;
+}
+
+/* Phone */
+@media (max-width: 500px) {
+
+    #memoryVideo {
+        height: 390px;
+    }
+
+}
+
+
+.mini-photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+}
+
+.mini-card {
+    background: rgba(106, 10, 10, 0.628);
+    padding: 8px 8px 18px;
+    width: 130px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+.mini-card img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    display: block;
+}
+.mini-card video {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    display: block;
+}
+
+
+.mini-card:hover {
+    transform: rotate(0deg) scale(1.05);
+    z-index: 5;
+}
+/* =====================================================
+           INTRO
+        ===================================================== */
+
+        .intro {
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            background:
+                radial-gradient(
+                    circle at center,
+                    #27131a 0%,
+                    #080607 65%
+                );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition:
+                opacity 1s ease,
+                visibility 1s ease;
+        }
+
+        .intro.hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .intro-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .intro-symbol {
+            color: var(--gold);
+            font-size: 24px;
+            margin-bottom: 30px;
+            animation: rotateSymbol 8s linear infinite;
+        }
+
+        .intro-small {
+            color: #927d82;
+            font-size: 9px;
+            letter-spacing: 6px;
+            margin-bottom: 20px;
+        }
+
+        .intro h1 {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 800;
+        font-size: clamp(70px, 13vw, 390px);
+        line-height: .9;
+}
+
+        .intro h1 span {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+
+        .gift-line {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+        .intro-sub {
+            color: var(--muted);
+            font-family: "Cormorant Garamond", serif;
+            font-size: 22px;
+            margin-top: 25px;
+        }
+
+        .enter-btn {
+            margin-top: 50px;
+            padding: 16px 28px;
+            background: transparent;
+            color: var(--cream);
+            border: 1px solid rgba(201,166,107,.6);
+            letter-spacing: 2px;
+            font-size: 9px;
+            transition: .4s;
+        }
+
+        .enter-btn span {
+            color: var(--gold);
+            margin-left: 15px;
+            font-size: 16px;
+        }
+
+        .enter-btn:hover {
+            background: var(--gold);
+            color: #100b0c;
+            transform: translateY(-4px);
+        }
+
+
+        /* =====================================================
+           PARTICLES
+        ===================================================== */
+
+        #particles {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 3;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: var(--gold);
+            border-radius: 50%;
+            opacity: .4;
+            animation: particleFloat linear infinite;
+        }
+
+
+        /* =====================================================
+           VOICE NOTE
+        ===================================================== */
+
+.voice-note {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 18px 22px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    background: #bd657b;
+    border: 1px solid rgba(255, 235, 220, 0.55);
+    border-radius: 50px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+}
+
+.voice-icon {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #783747;
+    font-size: 20px;
+}
+
+.voice-info {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.voice-info span {
+    color: #783747;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+}
+
+.voice-info small {
+    color: #f0d8d8;
+    font-size: 10px;
+}
+
+.voice-play {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+    border: 1px solid #ffe6d5;
+
+    background: #793747;
+    color: #fff2e8;
+
+    cursor: pointer;
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+.voice-play:hover {
+    background: #ffe6d5;
+    color: #783747;
+    transform: scale(1.08);
+}
+
+/* ------------------------------------------------- */
+
+/* =========================================
+   FLIP MEMORY CARD
+========================================= */
+
+.flip-memory {
+    width: 100%;
+    max-width: 580px;
+    height: 400px;
+    margin: 55px auto;
+    perspective: none;
+}
+
+.flip-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    transition: transform 1.2s cubic-bezier(.65, .05, .36, 1);
+}
+
+.flip-card.flipped {
+    transform: rotateY(180deg);
+}
+
+/* =========================================
+   FRONT AND BACK
+========================================= */
+
+.flip-front,
+.flip-back {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.flip-front {
+    background: #eadbd3;
+    border: 1px solid rgba(201, 166, 107, 0.45);
+    box-shadow:
+        0 18px 40px rgba(40, 10, 15, 0.16),
+        0 4px 12px rgba(40, 10, 15, 0.08);
+}
+
+.flip-front img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* =========================================
+   TAP BUTTON
+========================================= */
+
+.tap-text {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    padding: 10px 18px;
+    background: #9d5365;
+    color: #fff8f2;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    letter-spacing: 1.8px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    z-index: 2;
+}
+
+/* =========================================
+   BACK — LETTER PAGE
+========================================= */
+
+.flip-back {
+    transform: rotateY(180deg);
+    background: #ead9cf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border: 1px solid rgba(201, 166, 107, 0.5);
+    box-shadow: 0 18px 40px rgba(40, 10, 15, 0.16);
+}
+
+/* =========================================
+   INNER PAPER
+========================================= */
+
+.note-paper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background: #f8eee7;
+    border: 1px solid rgba(150, 100, 100, 0.15);
+    box-shadow: 0 5px 15px rgba(60, 25, 30, 0.10);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 28px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* =========================================
+   DECORATIVE HEART
+========================================= */
+
+.note-paper::before {
+    content: "♡";
+    position: absolute;
+    top: 14px;
+    left: 16px;
+    font-family: serif;
+    font-size: 20px;
+    color: #b47b85;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* =========================================
+   LETTER TEXT — SHARP
+========================================= */
+
+.note-paper p {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 16px;
+    color: #4b3035;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+    text-shadow: none;
+    filter: none;
+    opacity: 1;
+}
+
+.note-paper .urdu-text {
+    direction: rtl;
+    text-align: center;
+    font-family: serif;
+    line-height: 1.65;
+}
+
+/* =========================================
+   SIGNATURE
+========================================= */
+
+.note-sign {
+    flex-shrink: 0;
+    margin-top: 12px;
+    color: #9d6c73;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    letter-spacing: 1.7px;
+    text-align: center;
+}
+
+/* =========================================
+   RESPONSIVE — UP TO 680px
+   KEEP CARD SIZE THE SAME
+========================================= */
+
+@media (max-width: 680px) {
+    .flip-back {
+        padding: 12px;
+    }
+
+    .note-paper {
+        padding: 22px 18px;
+    }
+
+    .note-paper p {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-bottom: 12px;
+    }
+
+    .note-paper .urdu-text {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .note-sign {
+        font-size: 9px;
+        letter-spacing: 1px;
+        margin-top: 8px;
+    }
+
+    .note-paper::before {
+        top: 8px;
+        left: 10px;
+        font-size: 16px;
+    }
+
+    .tap-text {
+        font-size: 10px;
+        padding: 9px 14px;
+    }
+}
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 400px) {
+    .flip-back {
+        padding: 7px;
+    }
+
+    .note-paper {
+        padding: 16px 12px;
+    }
+
+    .note-paper p {
+        font-size: 12px;
+        line-height: 1.4;
+        margin-bottom: 8px;
+    }
+
+    .note-paper .urdu-text {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .note-sign {
+        font-size: 8px;
+        letter-spacing: 0.5px;
+    }
+}
+
+/* =====================================================
+   MUSIC
+===================================================== */
+
+.music-control {
+
+    position: fixed;
+
+    right: 30px;
+
+    bottom: 30px;
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(201,166,107,.5);
+
+    background: rgba(10,7,8,.7);
+
+    backdrop-filter: blur(15px);
+
+    color: var(--gold);
+
+    z-index: 500;
+
+    transition: .4s;
+
+}
+
+.music-control:hover {
+
+    transform: scale(1.1);
+
+}
+
+.music-control.playing {
+
+    box-shadow:
+        0 0 0 8px rgba(201,166,107,.06),
+        0 0 30px rgba(201,166,107,.2);
+
+}
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 100;
+            mix-blend-mode: normal;
+            background-color: #060505;
+        }
+
+        .nav-logo {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 26px;
+        }
+
+        .nav-logo span {
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            color: #c9bdc0;
+            text-decoration: none;
+            font-size: 9px;
+            letter-spacing: 2px;
+            transition: .3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-date {
+            color: #786c6f;
+            font-size: 9px;
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 700px) {
+            .nav-links {
+                display: none;
+            }
+        }
+
+
+        /* =====================================================
+           GIFT
+        ===================================================== */
+
+        .gift-image {
+            width: 100%;
+            max-width: 500px;
+            margin: 20px auto;
+            text-align: center;
+            display: none;
+        }
+
+        .gift-image img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+            border-radius: 15px;
+            object-fit: contain;
+        }
+
+        .gift-section {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+       .gift-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: #e8d8c8;
+    transition: 0.3s ease;
+}
+
+        .gift-text:hover {
+            transform: scale(1.08);
+        }
+
+        .gift-image.show {
+            display: block;
+            animation: popUp 0.6s ease;
+        }
+
+        @keyframes popUp {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .gift-image {
+                width: 90%;
+                max-width: 350px;
+            }
+
+            .gift-image img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .hero-image {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(
+                    rgba(10,5,7,.4),
+                    rgba(10,5,7,.9)
+                ),
+                url("hero.jpg");
+            background-size: cover;
+            background-position: center;
+            transform: scale(1.04);
+            animation: heroZoom 12s ease forwards;
+        }
+
+        .hero-gradient {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(
+                    circle at center,
+                    transparent 15%,
+                    rgba(8,6,7,.7) 80%
+                );
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 5;
+            padding-top: 70px;
+        }
+
+        .hero-top {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            color: var(--gold);
+            font-size: 8px;
+            letter-spacing: 5px;
+        }
+
+        .hero-top span {
+            width: 35px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .hero h1 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(100px, 17vw, 220px);
+            font-weight: 300;
+            line-height: .75;
+            margin-top: 30px;
+            letter-spacing: -6px;
+        }
+
+        .hero-script {
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(25px, 4vw, 45px);
+            color: var(--gold-light);
+            font-style: italic;
+            margin-top: 20px;
+        }
+
+        .hero-description {
+            color: #b9aaad;
+            font-size: 12px;
+            line-height: 2;
+            margin-top: 35px;
+        }
+
+        .hero-from {
+            margin-top: 35px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .hero-from span {
+            color: #7f7175;
+            font-size: 8px;
+            letter-spacing: 4px;
+        }
+
+        .hero-from strong {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 25px;
+            font-weight: 400;
+        }
+
+        .discover {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 50px;
+            color: #a7979a;
+            text-decoration: none;
+            font-size: 8px;
+            letter-spacing: 3px;
+        }
+
+        .discover b {
+            color: var(--gold);
+            font-size: 20px;
+            animation: arrowMove 1.5s infinite;
+        }
+
+
+        /* =====================================================
+           OPENING
+        ===================================================== */
+
+        .opening {
+            min-height: 80vh;
+            padding: 150px 12%;
+            display: flex;
+            align-items: center;
+            gap: 10%;
+            background: #0b0809;
+        }
+
+        .opening-number,
+        .section-number {
+            font-family: "Cormorant Garamond", serif;
+            color: var(--gold);
+            font-size: 18px;
+        }
+
+        .opening-content {
+            max-width: 700px;
+        }
+
+        .eyebrow {
+            font-family: "Brush Script MT", "Segoe Script", cursive;
+            font-size: 8px;
+            color: var(--gold);
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+        }
+
+        .opening h2,
+        .section-title h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-weight: 400;
+            font-size: clamp(50px, 7vw, 90px);
+            line-height: .9;
+        }
+
+        .opening h2 em,
+        .section-title h2 em {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        .opening-content > p:not(.eyebrow) {
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 2;
+            max-width: 600px;
+            margin-top: 35px;
+        }
+
+        .opening-content span {
+            color: var(--gold-light);
+            display: block;
+            margin-top: 15px;
+        }
+
+
+        /* =====================================================
+           SECRET
+        ===================================================== */
+
+        .secret {
+            padding: 140px 7%;
+            background:
+                radial-gradient(
+                    circle,
+                    #241118,
+                    #080607 70%
+                );
+            display: flex;
+            justify-content: center;
+        }
+
+        .secret-box {
+            max-width: 650px;
+            width: 100%;
+            text-align: center;
+            padding: 80px 40px;
+            border: 1px solid rgba(201,166,107,.18);
+            position: relative;
+        }
+
+        .lock {
+            color: var(--gold);
+            font-size: 35px;
+            margin-bottom: 30px;
+        }
+
+        .secret-box h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-weight: 400;
+            font-size: 55px;
+            line-height: 1;
+        }
+
+        .secret-box h2 em {
+            color: var(--gold);
+        }
+
+
+        /* =====================================================
+           STORY
+        ===================================================== */
+
+        .story,
+        .memories,
+        .letter {
+            padding: 150px 8%;
+            background: #0a0809;
+        }
+
+        .section-title {
+            margin: 20px 0 100px 8%;
+        }
+
+        .timeline {
+            max-width: 1000px;
+            margin: auto;
+            position: relative;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: rgba(201,166,107,.25);
+        }
+
+        .timeline-item {
+            width: 50%;
+            position: relative;
+            padding: 30px 70px;
+            margin-bottom: 80px;
+        }
+
+        .timeline-item.left {
+            text-align: right;
+        }
+
+        .timeline-item.right {
+            margin-left: 50%;
+        }
+
+        .timeline-card span {
+            color: var(--gold);
+            font-size: 8px;
+            letter-spacing: 4px;
+        }
+
+        .timeline-card h3 {
+            font-family: "Cormorant Garamond", serif;
+            font-weight: 400;
+            font-size: 42px;
+            line-height: .95;
+            margin: 15px 0;
+        }
+
+        .timeline-card p {
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 2;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            top: 25px;
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            background: #0a0809;
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .left .timeline-dot {
+            right: -20px;
+        }
+
+        .right .timeline-dot {
+            left: -20px;
+        }
+
+        @media (max-width: 700px) {
+            .timeline-line {
+                left: 15px;
+            }
+
+            .timeline-item,
+            .timeline-item.right {
+                width: 100%;
+                margin-left: 0;
+                padding: 30px 20px 30px 55px;
+                text-align: left;
+            }
+
+            .left .timeline-dot,
+            .right .timeline-dot {
+                left: -5px;
+                right: auto;
+            }
+        }
+
+
+        /* =====================================================
+           GALLERY
+        ===================================================== */
+
+        .gallery {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .photo {
+            height: 420px;
+            position: relative;
+            overflow: hidden;
+            background: #160d10;
+        }
+
+        .photo-large {
+            height: 600px;
+            grid-row: span 2;
+        }
+
+        .photo-wide {
+            grid-column: span 2;
+        }
+
+        .photo img {
+            height: 100%;
+            object-fit: cover;
+            transition: 1s;
+            filter: saturate(.8);
+        }
+
+        .photo:hover img {
+            transform: scale(1.08);
+            filter: saturate(1);
+        }
+
+        .photo::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(
+                    transparent 40%,
+                    rgba(0,0,0,.8)
+                );
+        }
+
+        .photo-caption {
+            position: absolute;
+            z-index: 2;
+            bottom: 25px;
+            left: 25px;
+        }
+
+        .photo-caption span {
+            color: var(--gold);
+            font-family: "Cormorant Garamond", serif;
+            font-size: 25px;
+        }
+
+        .photo-caption p {
+            font-size: 10px;
+            letter-spacing: 1px;
+            color: #e3d8da;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 650px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .photo-large {
+                height: 450px;
+                grid-row: auto;
+            }
+
+            .photo-wide {
+                grid-column: auto;
+            }
+        }
+    
+        /* ------------------------------------ */
+
+        /* =====================================================
+   A LITTLE BOX OF MEMORIES
+===================================================== */
+
+.letter-memory-box {
+    margin: 55px 0 35px;
+    padding: 35px 18px;
+
+    background: #e7d7c7;
+
+    border: 1px solid #c9ad98;
+
+    text-align: center;
+
+    position: relative;
+}
+
+
+/* INTRO */
+
+.memory-intro {
+    max-width: 500px;
+    margin: auto;
+}
+
+.memory-butterfly {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.memory-intro h3 {
+    margin: 8px 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 34px;
+
+    font-weight: 500;
+
+    color: #4b2c2c;
+}
+
+.memory-intro p {
+    margin: 12px 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    color: #705348;
+}
+
+
+/* OPEN BUTTON */
+
+.open-memories-btn {
+    margin-top: 15px;
+
+    padding: 12px 22px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #793747;
+
+    color: #fff7f0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: .3s ease;
+}
+
+.open-memories-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(70,40,35,.20);
+}
+
+
+
+/* LITTLE HEART BREAK */
+
+.little-heart-break {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 22px 15px;
+    margin: 0 auto;
+    text-align: center;
+    color:#000000;
+}
+
+.heart-break-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.tiny-heart-deco {
+    color: rgb(107, 49, 58);
+    font-size: 23px;
+    line-height: 1;
+}
+
+.heart-break-title {
+    margin: 0;
+    color: rgb(107, 49, 58);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 23px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
+.heart-break-subtitle {
+    color: brown;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 1px;
+    line-height: 1.7;
+}
+
+.heart-line {
+    width: 35px;
+    height: 1px;
+    background: brown;
+    opacity: 0.65;
+}
+
+@media (max-width: 500px) {
+    .little-heart-break {
+        gap: 9px;
+        padding: 17px 10px;
+    }
+
+    .heart-break-title {
+        font-size: 20px;
+    }
+
+    .heart-break-subtitle {
+        font-size: 8px;
+        letter-spacing: 0.5px;
+    }
+
+    .heart-line {
+        width: 20px;
+    }
+}
+
+/* =====================================================
+   MEMORY VIEWER
+===================================================== */
+
+.memory-viewer {
+    display: none;
+
+    max-width: 300px;
+
+    margin: 35px auto 0;
+
+    position: relative;
+
+    /* width:70%; */
+}
+
+.memory-viewer.active {
+    display: block;
+
+    animation: memoryAppear .5s ease;
+}
+
+
+@keyframes memoryAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* CLOSE */
+
+.memory-close {
+    position: absolute;
+
+    top: -10px;
+
+    right: 0;
+
+    background: none;
+
+    border: none;
+
+    font-size: 27px;
+
+    color: #793747;
+
+    cursor: pointer;
+
+    z-index: 5;
+}
+
+
+/* NUMBER */
+
+.memory-number {
+    margin-bottom: 15px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    color: #876a5c;
+}
+
+
+/* PHOTO */
+
+.memory-photo {
+    padding: 10px;
+
+    background: #f7ede3;
+
+    border: 1px solid #c7a992;
+
+    margin: auto;
+
+    box-shadow:
+        0 15px 35px rgba(70,45,35,.18);
+}
+
+.memory-photo img {
+    width: 100%;
+
+    margin: auto;
+    height: 300px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* CAPTION */
+
+.memory-caption {
+    margin: 20px auto;
+
+    max-width: 400px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 19px;
+
+    line-height: 1.6;
+
+    font-style: italic;
+
+    color: #63463b;
+}
+
+
+/* CONTROLS */
+
+.memory-controls {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 15px;
+}
+
+.memory-prev {
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f5e8dc;
+
+    color: #793747;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+.memory-next {
+    padding: 11px 20px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: #793747;
+
+    color: white;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+/* --------------------------------------- */
+
+/* =====================================================
+   FINAL MESSAGE
+===================================================== */
+
+.memory-final {
+    display: none;
+
+    margin-top: 35px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #c9ad98;
+}
+
+.memory-final.show {
+    display: block;
+
+    animation: memoryAppear .6s ease;
+}
+
+.memory-final-hearts {
+    font-size: 20px;
+
+    color: #793747;
+
+    margin-bottom: 12px;
+}
+
+.memory-final p {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 19px;
+
+    line-height: 1.7;
+
+    color: #63463b;
+}
+
+.memory-final strong {
+    display: block;
+
+    margin-top: 15px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 18px;
+
+    color: #793747;
+}
+
+
+/* =====================================================
+   PHONE
+===================================================== */
+
+@media (max-width: 500px) {
+
+    .letter-memory-box {
+        margin: 45px 0 30px;
+
+        padding: 30px 12px;
+    }
+
+    .memory-intro h3 {
+        font-size: 29px;
+    }
+
+    .memory-intro p {
+        font-size: 17px;
+    }
+
+    .memory-photo img {
+        height: 390px;
+    }
+
+    .memory-caption {
+        font-size: 18px;
+    }
+
+    .memory-next {
+        font-size: 15px;
+
+        padding: 10px 17px;
+    }
+
+}
+
+        /* =====================================================
+           OUR LITTLE PICTURES
+        ===================================================== */
+
+        .our-pictures {
+            position: relative;
+            padding: 100px 6%;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .picture-label {
+            font-size: 10px;
+            letter-spacing: 4px;
+            opacity: .55;
+            margin-bottom: 18px;
+        }
+
+        .our-pictures h2 {
+            font-size: clamp(40px, 6vw, 65px);
+            font-weight: 400;
+            line-height: 1;
+            margin: 0;
+        }
+
+        .our-pictures h2 em {
+            display: block;
+            color: var(--gold);
+        }
+
+        .picture-intro {
+            max-width: 500px;
+            margin: 22px auto 55px;
+            line-height: 1.8;
+            opacity: .65;
+        }
+
+        .picture-wall {
+            max-width: 900px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .memory-polaroid {
+            position: relative;
+            width: 250px;
+            padding: 12px 12px 22px;
+            background: #000000;
+            cursor: pointer;
+            /* box-shadow: 0 12px 30px rgba(0,0,0,.18); */
+            transition:
+            transform .4s ease,
+            box-shadow .4s ease;
+            color: #333;
+            border: 1px solid var(--burgundy);
+            box-shadow: 0px 0px 9px 0px var(--burgundy-light);
+        }
+
+        .memory-polaroid:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 22px 45px rgba(163, 109, 109, 0.22);
+            z-index: 10;
+        }
+
+        .memory-polaroid img {
+            display: block;
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .memory-polaroid video {
+            display: block;
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .memory-polaroid p {
+            margin: 15px 5px 0;
+            font-family: cursive;
+            font-size: 14px;
+            line-height: 1.5;
+            color: white;
+        }
+
+        .memory-polaroid p span {
+            font-size: 16px;
+        }
+
+        .tape {
+            position: absolute;
+            width: 50px;
+            height: 15px;
+            top: -11px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255,220,170,.75);
+            z-index: 5;
+            box-shadow: 0 2px 5px rgba(0,0,0,.08);
+        }
+
+        @media (max-width: 700px) {
+            .our-pictures {
+                padding: 85px 5%;
+            }
+
+            .picture-intro {
+                margin-bottom: 45px;
+            }
+
+            .picture-wall {
+                flex-direction: column;
+                gap: 35px;
+            }
+
+            .memory-polaroid {
+                width: min(88vw, 350px);
+            }
+
+            .memory-polaroid img,
+            .memory-polaroid video {
+                height: auto;
+                max-height: 400px;
+            }
+        }
+
+
+        /* =====================================================
+           PICTURE LIGHTBOX
+        ===================================================== */
+
+        .picture-lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 9998;
+            background: rgba(0,0,0,.92);
+            backdrop-filter: blur(12px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: .4s ease;
+        }
+
+        .picture-lightbox.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .picture-lightbox img {
+            max-width: 90vw;
+            max-height: 85vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border: 1px solid rgba(255,255,255,.2);
+        }
+
+        .close-picture {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 40px;
+            z-index: 2;
+        }
+
+
+        /* =====================================================
+           LETTER
+        ===================================================== */
+
+        .letter {
+            text-align: center;
+            min-height: 900px;
+        }
+
+        .letter-envelope {
+            width: 360px;
+            height: 230px;
+            margin: 80px auto 25px;
+            position: relative;
+            cursor: pointer;
+            transition: .5s;
+            perspective: 700px;
+        }
+
+        .letter-envelope:hover {
+            transform: translateY(-10px);
+        }
+
+        .envelope-paper {
+            position: absolute;
+            width: 90%;
+            height: 90%;
+            left: 5%;
+            top: 5%;
+            background: #efe2d5;
+            z-index: 1;
+        }
+
+        .paper-content {
+            color: #30181d;
+            padding: 40px 20px;
+        }
+
+        .paper-content span {
+            font-size: 7px;
+            letter-spacing: 4px;
+        }
+
+        .paper-content h3 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 40px;
+            font-weight: 400;
+            margin: 10px 0;
+        }
+
+        .paper-content small {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 17px;
+        }
+
+        .envelope-front {
+            position: absolute;
+            inset: 0;
+            z-index: 3;
+            background: #5a2633;
+            clip-path: polygon(
+                0 0,
+                50% 50%,
+                100% 0,
+                100% 100%,
+                0 100%
+            );
+        }
+
+        .envelope-flap {
+            position: absolute;
+            z-index: 4;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 180px solid transparent;
+            border-right: 180px solid transparent;
+            border-top: 120px solid #793747;
+            transform-origin: top;
+            transition: .8s;
+        }
+
+        .letter-envelope.open .envelope-flap {
+            transform: rotateX(180deg);
+            z-index: 0;
+        }
+
+        .click-text {
+            color: #76666a;
+            letter-spacing: 4px;
+            font-size: 8px;
+        }
+
+
+        /* =====================================================
+           LETTER MODAL
+        ===================================================== */
+
+        .letter-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(4,3,3,.92);
+            backdrop-filter: blur(15px);
+            z-index: 900;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: .5s;
+        }
+
+        .letter-modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .letter-modal-inner {
+            width: 100%;
+            max-width: 700px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .real-letter {
+            background: #efe3d7;
+            color: #30171d;
+            padding: 65px;
+            box-shadow: 0 30px 100px rgba(0,0,0,.7);
+        }
+
+        .close-letter {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: none;
+            border: none;
+            color: #32191e;
+            font-size: 30px;
+            z-index: 2;
+        }
+
+        .letter-date {
+            color: #97636d;
+            font-size: 8px;
+            letter-spacing: 4px;
+        }
+
+        .real-letter h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 48px;
+            font-weight: 400;
+            margin: 30px 0;
+        }
+
+        .real-letter > p:not(.letter-date) {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 20px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .letter-sign {
+            margin-top: 40px;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 20px;
+            text-align: right;
+        }
+
+        .letter-sign strong {
+            display: block;
+            color: #7a3041;
+            font-size: 28px;
+            margin-top: 8px;
+        }
+
+        @media (max-width: 600px) {
+            .letter-envelope {
+                width: 290px;
+            }
+
+             .envelope-flap {
+             border-left-width: 145px;
+             border-right-width: 145px;
+             border-top-width: 100px;
+             border-left-color: transparent;
+             border-right-color: transparent;
+             border-top: 100px solid #793747;
+    }
+
+            .real-letter {
+                padding: 40px 25px;
+            }
+
+            .voice-note {
+                border-radius: 25px;
+                padding: 15px;
+            }
+        }
+
+
+        /* =====================================================
+           FINAL
+        ===================================================== */
+
+        .final1 {
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background:
+                radial-gradient(
+                    circle at center,
+                    #35151f,
+                    #090607 65%
+                );
+        }
+
+        .final1-content {
+            position: relative;
+            z-index: 5;
+        }
+
+      
+
+        .final1 h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(70px, 11vw, 140px);
+            font-weight: 300;
+            line-height: .8;
+            margin-top: 20px;
+        }
+
+        .final1 h2 em {
+            color: var(--gold);
+        }
+
+        .final1-message {
+            color: #9c898e;
+            font-size: 12px;
+            margin-top: 30px;
+        }
+
+        .final1-names {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 25px;
+            margin-top: 40px;
+        }
+
+        .final1-names span {
+            color: var(--gold);
+            padding: 0 12px;
+        }
+
+        .forever-btn {
+            margin-top: 40px;
+            background: transparent;
+            border: 1px solid rgba(201,166,107,.5);
+            color: #eee;
+            padding: 15px 25px;
+            letter-spacing: 3px;
+            font-size: 8px;
+            transition: .4s;
+        }
+
+        .forever-btn:hover {
+            background: var(--gold);
+            color: #171011;
+        }
+
+
+    @media (max-width: 500px) {
+
+      .envelope-flap {
+        border-left-width: 145px;
+        border-right-width: 145px;
+        border-top-width: 100px;
+        border-top: 100px solid #793747;
+    }
+
+}
+
+/* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            padding: 60px 20px;
+            text-align: center;
+            background: #060505;
+            border-top: 1px solid rgba(255,255,255,.05);
+        }
+
+        .footer-logo {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 35px;
+        }
+
+        .footer-logo span {
+            color: var(--gold);
+        }
+
+        footer p {
+            color: #85767a;
+            font-size: 10px;
+            margin: 15px 0;
+        }
+
+        footer small {
+            color: #55494c;
+            font-size: 8px;
+            letter-spacing: 2px;
+        }
+
+
+        /* =====================================================
+           ANIMATIONS
+        ===================================================== */
+
+        @keyframes heroZoom {
+            from {
+                transform: scale(1.04);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes rotateSymbol {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes particleFloat {
+            from {
+                transform:
+                    translateY(0)
+                    translateX(0);
+            }
+
+            to {
+                transform:
+                    translateY(-100vh)
+                    translateX(50px);
+            }
+        }
+
+        @keyframes arrowMove {
+            0%,100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(8px);
+            }
+        }
+
+        @keyframes heartbeat {
+            0%,100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        @keyframes reveal {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =====================================================
+         INTRO SCREEN
+    ===================================================== -->
+
+    <div class="intro" id="intro">
+
+        <div class="intro-stars"></div>
+
+        <div class="intro-content">
+
+            <div class="intro-symbol">✦</div>
+
+            <p class="intro-small">
+                A PRIVATE LITTLE WORLD
+            </p>
+
+            <h1>
+                Happy Birthday
+            </h1>
+
+            <p class="intro-sub">
+                From Your Girl, with all my heart.
+            </p>
+
+            <button class="enter-btn" onclick="enterWebsite()">
+                Click Here
+                <span>→</span>
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         BACKGROUND PARTICLES
+    ===================================================== -->
+
+    <div id="particles"></div>
+
+
+    <!-- =====================================================
+         MUSIC
+    ===================================================== -->
+
+    <audio id="music" loop>
+        <source src="images/sound.mp3" type="audio/mpeg">
+    </audio>
+
+    <button class="music-control" id="musicControl">
+        <span class="music-icon">♫</span>
+    </button>
+
+
+    <!-- =====================================================
+         NAVIGATION
+    ===================================================== -->
+
+    <nav id="navbar">
+
+        <div class="nav-logo">
+            <span>HR</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#story">Story</a>
+            <a href="#memories">Memories</a>
+            <a href="#letter">Letter</a>
+        </div>
+
+        <div class="nav-date">
+            01 / 01
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================================
+         HERO
+    ===================================================== -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-image"></div>
+
+            <div class="hero-gradient"></div>
+
+            <div class="hero-content">
+
+                <div class="hero-top">
+                    <span></span>
+                    <p>A BIRTHDAY STORY</p>
+                    <span></span>
+                </div>
+
+                <div class="hero-script">
+                    Happiest birthday!
+                </div>
+
+                <p class="hero-description">
+                    A year older
+                    <br>
+                    And still a sexy chick!
+                   <br><br>
+
+    <strong class="gift-line">
+        “ A little something I made just for you ♡ ”</strong>
+                </p>
+
+                <div class="hero-from">
+                    <span>with love</span>
+                </div>
+
+                <a href="#story" class="discover">
+                    <span>DISCOVER OUR STORY</span>
+                    <b>↓</b>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             OPENING MESSAGE
+        ===================================================== -->
+
+        <section class="opening">
+
+            <div class="opening-number">
+                01
+            </div>
+
+            <div class="opening-content">
+
+                <p class="eyebrow">
+                    DEAR HAZIQ ♡
+                </p>
+
+                <h2>
+                    19
+                    <em>October</em>
+                </h2>
+
+                <p>
+                A date I probably wouldn't have noticed before <br>
+                But now, <br>
+                It's the date that reminds me of &nbsp; <Strong>You</Strong> &nbsp;♡
+                    <span>—🎀</span>
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SECRET QUESTION
+        ===================================================== -->
+
+        <section class="secret">
+
+            <div class="secret-box">
+
+                <div class="lock">
+                    ♡
+                </div>
+
+                <p class="eyebrow">
+                    Happy Birthday to you!
+                </p>
+
+                <div class="gift-section">
+
+                    <h3 onclick="showGift()" class="gift-text">
+                        Something special is waiting for you!
+                        <br>Tap to reveal 𐙚
+                    </h3>
+
+                    <div id="giftImage" class="gift-image">
+                        <img src="images/download.jpg" alt="Birthday Gift">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             STORY
+        ===================================================== -->
+
+        <section class="story" id="story">
+
+            <div class="section-number">
+                02
+            </div>
+
+            <div class="section-title">
+
+                <p class="eyebrow">
+                    OUR LITTLE UNIVERSE
+                </p>
+
+                <h2>
+                    The story of
+                    <em>us.</em>
+                </h2>
+
+            </div>
+
+
+            <div class="timeline">
+
+                <div class="timeline-line"></div>
+
+
+                <div class="timeline-item left">
+
+                    <div class="timeline-card">
+
+                        <span>THE BEGINNING 14-MAY</span>
+
+                        <h3>
+                            Ahmm-Brother Sister!
+                        </h3>
+
+                        <p>
+                        I still remember my first day at the office.
+                        Somehow, we became brother and sister before we even realized how important we'd become to each other.
+                        And honestly, I wouldn't change the beginning of our story for anything. 🤎 
+                        </p>
+
+                    </div>
+
+                    <div class="timeline-dot">
+                        ✦
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item right">
+
+                    <div class="timeline-card">
+
+                        <span>THE LITTLE THINGS ~ 20 May</span>
+
+                        <h3>
+                            The Friendship-Era!
+                        </h3>
+
+                        <p>
+                            After that, we slowly became friends, and our bond grew stronger with every passing day. What started as a simple friendship became a beautiful connection filled with laughter, comfort, and countless little memories.❤️
+                        </p>
+
+                    </div>
+
+                    <div class="timeline-dot">
+                        ♡
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item left">
+
+                    <div class="timeline-card">
+
+                        <span>THE MEMORIES ~ 11 June</span>
+
+                        <h3>
+                            Moments I wouldn't trade.
+                        </h3>
+
+                        <p>
+                            I still remember that rainy day when you said, “Ms. Wania, from today onwards, neither will you make any male friend, nor will I make any female best friend.”
+
+And then there were all those little memories…🥹 conducting interviews, playing truth games, laughing over the smallest things, and of course — “Ms. Bushra, ye lein pen.” 😂😭❤️
+
+I don’t know if you remember them all, but I definitely do. ✨
+                        </p>
+
+                    </div>
+
+                    <div class="timeline-dot">
+                        ✧
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item right">
+
+                    <div class="timeline-card">
+
+                        <span>RIGHT NOW♾️</span>
+
+                        <h3>
+                            And here we are
+                        </h3>
+
+                        <p>
+                            Okay, now we’re in a completely different phase—the one
+                            I never even imagined we’d be in. Ahhh, I’m fucking loving this phase.✨
+                        <br>
+                          Still laughing at the little things.
+                          Still making memories I never want to forget.
+                        </p>
+
+                    </div>
+
+                    <div class="timeline-dot">
+                        ♡
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             MEMORIES
+        ===================================================== -->
+
+        <section class="memories" id="memories">
+
+            <div class="section-number">
+                03
+            </div>
+
+            <div class="section-title">
+
+                <p class="eyebrow">
+                   A few of my favorites.
+                </p>
+
+                <h2>
+                    Memories
+                    <em>we keep.</em>
+                </h2>
+
+            </div>
+
+
+            <div class="gallery">
+
+                <div class="photo photo-large">
+
+                    <img src="images/memory3.jpeg" alt="Our memory">
+
+                    <div class="photo-caption">
+                        <span>01</span>
+                        <p>A moment worth remembering.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="photo">
+
+                    <img src="images/memory-1.png" alt="Our memory">
+
+                    <div class="photo-caption">
+                        <span>02</span>
+                        <p>Just us.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="photo">
+
+                    <img src="images/memory2.png" alt="Our memory">
+
+                    <div class="photo-caption">
+                        <span>03</span>
+                        <p>One of my favorites.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="photo photo-wide">
+
+                    <img src="images/memory4.png" alt="Our memory">
+
+                    <div class="photo-caption">
+                        <span>04</span>
+                        <p>You.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             OUR LITTLE PICTURES
+        ===================================================== -->
+
+        <section class="our-pictures" id="ourPictures">
+
+            <p class="picture-label">WHERE THE LITTLE THINGS MATTER♡</p>
+
+            <h2>
+               Little moments,
+                <br> <em>Big feelings ♡</em></br>
+            </h2>
+
+            <p class="picture-intro" style="font-family: 'Times New Roman', Times, serif;">
+                A few little moments, holding a thousand feelings & memories that will always have a special place in my heart🦋🤎
+            </p>
+         
+
+            <div class="picture-wall">
+
+
+                <!-- Picture 2 / UPDATES VIDEO -->
+
+                <div class="memory-polaroid picture-two">
+
+                <div class="tape"></div>
+
+                    <video
+                        id="updatesVideo"
+                        src="images/updates.mp4"
+                        muted
+                        loop
+                        autoplay
+                        playsinline
+                        preload="metadata">
+                    </video>
+
+                    <p>
+                        "I love it when you send random fit-checks and little updates about your day. It’s such a small thing, but somehow it makes me feel closer🤍"
+                    </p>
+
+                </div>
+
+
+                <!-- Picture 1 -->
+
+                <div class="memory-polaroid picture-one"
+                     onclick="openPicture('images/card-1.png')">
+
+                    <div class="tape"></div>
+
+                    <img
+                        src="images/card-1.png"
+                        alt="Our memory">
+
+                    <p>
+                        "You in a shalwar kameez and shawl… handsome, & one of my favorite views.This has always been one of my absolute favorite looks on you🤎"
+                    </p>
+
+                </div>
+
+
+                <!-- Picture 3 / OUTFIT VIDEO -->
+
+                <div class="memory-polaroid picture-three">
+
+                    <div class="tape"></div>
+
+                    <video
+                        id="outfitVideo"
+                        src="images/outfit.mp4"
+                        muted
+                        autoplay
+                        loop
+                        playsinline
+                        preload="metadata">
+                    </video>
+
+                    <p>
+                        "I love you when you come to me for outfit approval, as if my opinion matters to you. It’s such a tiny little thing, awhhhh I love this🥹🤎"
+                    </p>
+
+                </div>
+
+
+                <!-- Picture 4 / CONFESSION VIDEO -->
+
+                <div class="memory-polaroid picture-four">
+
+                    <div class="tape"></div>
+
+                    <video
+                        id="confessionVideo"
+                        src="images/confession_louder_boosted.mp4"
+                        loop
+                        unmuted
+                        playsinline
+                        preload="metadata">
+                    </video>
+
+                    <p>
+                       Click to play the video. "I love you even more when you remind me that I’m the only one who gets to have your heart.<br><strong>Hehehe😭🤎"</strong>
+                    </p>
+
+                </div>
+
+
+                <!-- Picture 5 -->
+
+                <div class="memory-polaroid picture-five"
+                     onclick="openPicture('images/last.jpeg')">
+
+                   <div class="tape"></div>
+
+                    <img
+                        src="images/last.jpeg"
+                        alt="Our memory">
+
+                    <p>
+                    "I love your eyes , I love your hair, I love your voice,I love your personality, I love your laugh, I love everything about you💗"
+                    </p>
+
+                </div>
+
+            <!-- --------------Picture 6----------------- -->
+
+                <div class="memory-polaroid picture-three">
+
+                    <div class="tape"></div>
+
+                    <video
+                        id="outfitVideo"
+                        src="images/29.mp4"
+                        muted
+                        autoplay
+                        loop
+                        playsinline
+                        preload="metadata">
+                    </video>
+
+                    <p>
+                        "I adore these little glimpses of your life. They may seem ordinary to you, but somehow they always feel special to me.🦋🥹"
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PICTURE LIGHTBOX
+        ===================================================== -->
+
+        <div class="picture-lightbox" id="pictureLightbox">
+
+            <button
+                class="close-picture"
+                onclick="closePicture()">
+                ×
+            </button>
+
+            <img
+                id="bigPicture"
+                src=""
+                alt="Memory">
+
+        </div>
+
+        
+
+
+        <!-- =====================================================
+             LOVE LETTER
+        ===================================================== -->
+
+        <section class="letter" id="letter">
+
+            <div class="section-number">
+                04
+            </div>
+
+            <div class="section-title">
+
+                <p class="eyebrow">
+                    WORDS FROM MY HEART
+                </p>
+
+                <h2>
+                    Ohhh! I wrote you
+                    <em>something.</em>
+                </h2>
+
+            </div>
+
+
+            <div class="letter-envelope" onclick="openLetter()">
+
+                <div class="envelope-flap"></div>
+
+                <div class="envelope-paper">
+
+                    <div class="paper-content">
+
+                        <span>
+                            TO HAZIQ
+                        </span>
+
+                        <h3>
+                            Open me.
+                        </h3>
+
+                        <small>
+                            With love, Huzurum
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div class="envelope-front"></div>
+
+            </div>
+
+            <p class="click-text">
+                CLICK THE LETTER
+            </p>
+
+        </section>
+
+
+        <!-- =====================================================
+             LETTER MODAL
+        ===================================================== -->
+
+        <div class="letter-modal" id="letterModal">
+
+            <div class="letter-modal-inner">
+
+                <button
+                    class="close-letter"
+                    onclick="closeLetter()">
+                    ×
+                </button>
+
+                <div class="real-letter">
+
+                    <p class="letter-date">
+                        FOR HAZIQ • WITH LOVE
+                    </p>
+
+                    <br><br>
+
+                    <p>
+                        <small>
+                            Okay, before you start reading this letter!
+                            Turn the music off first, then play the voice note below.
+                            And only after that, start reading this letter!🤍
+                        </small>
+                    </p>
+
+
+    <div class="voice-note">
+
+                        <div class="voice-icon">🎙️</div>
+
+                        <div class="voice-info">
+                            <span>🥹❤️</span>
+                            <small>~My 11:11 PERSON</small>
+                        </div>
+
+                        <button
+                            id="voicePlayBtn"
+                            class="voice-play">
+                            ▶
+                        </button>
+
+                        <audio id="voiceNote">
+                            <source src="images/voice-note.mp3" type="audio/mpeg">
+                        </audio>
+
+                    </div>
+
+
+                    <p style="text-align: end;">
+                        -🩷میں تاں کول تیرے رہنا 
+                    </p>
+
+
+                    <p>
+                        <small>
+                            “The song in the voice note above carries
+                            some feelings that are hard to put into words!”
+                        </small>
+                    </p>
+
+
+                    <br><br>
+
+                    <h2>
+                        My favorite person,
+                    </h2>
+
+
+                    <p>
+                        Happy birthday Haziq SHB. My Chatgpt, My Classic Man, My Safe Place, My Best friend!🧸
+                    </p>
+
+
+                    <p>
+                        <br>
+
+                        A little effort from my side.
+                        <br>
+                        Me hamesha apky sath rhoungi. Ap pe nazrain rkhoungi taky ap kisi pe nazrain nah rkh sakain!
+                        <br><br>
+
+                        <strong>
+                            Khair Phly important bat pe aty baqi batain to hoti rahain gi!
+                        </strong>
+
+                        <br><br>
+
+                        I know effort choti hai bas me chahti ke jb ap ye website dekhain to apko pata lagy
+                        kitni axhi hun me MashaAllah, Alhamdullilah!
+
+                        Or zara kam danta krein mjhy. Kisi din gussa ho gai naah phir awain tunning kar dungi apki!
+                        <br>
+
+                        Mere se zara dar ke rahain. Ayi smjh?
+                        <br>
+
+                        Main itni achi hoon ke kabhi kabhi mujhe khud samajh nahi aata ke itni achi kaise hoon :)
+                        <br>
+
+                        Umm Okay, Ab qadar krein meri dekhain kitni shareef, susheel, pyari, masoom larki
+                        apko dhoondny se bhi ni milni.
+                        <br>
+
+                        Ahmm Wese ap dhoondain gy bhi nai kyunky ik he glti insaan bar bar ni kar skta.
+                        <br><br>
+
+                        KHAIR!
+                        <br>
+
+                        Mazak kar rhi bas me chahti apko meri yeh choti se effort yaad rahy OR ap thora
+                        sa khush ho jain.
+                        <br>
+
+                        Me srf chahti ap apni birthday pe itna khush hon jitna ik khusra
+                        apny bachy ke paida hony pe khush hoga!
+                    </p>
+
+
+                    <p>
+                        Okay! You don't know Haziq how much you mean to me. You are not just a special person, you are my safe place, my favorite notification! I hope this year brings you endless happiness, success, peace, and all the things your heart wishes for. May you always have reasons to smile, and may I always be there to make you smile… or annoy you, because obviously that is also my responsibility.
+                        <br>
+
+                        May this new chapter of your life be filled with beautiful moments, unforgettable memories, and lots and lots of happiness. And yes, I hope I get to be a part of many of those memories.
+
+                        <br>
+
+                        <strong>Happy Birthday, Mohtaram!🎀</strong>
+
+                        <br>
+
+                        And now you're 26… which means you're officially getting older, but unfortunately for you, you still have to deal with me😚
+                    </p>
+
+
+                    <p>
+                        Haziq!
+                        <br>
+
+                        I know sometimes I end up hurting you, but I never mean to.
+                        <br>
+
+                        And sometimes I say something,
+                        and you understand it completely differently from what I actually meant.
+                        <br>
+
+                        Anyway, that's your fault because I always say things perfectly😌
+                        <br>
+
+                        And one more thing…
+                        <br>
+
+                        <strong>You are My favorite headache! 🦋</strong>
+                    </p>
+
+                    <p><br>
+
+                        I'm blessed to have you in my life!
+                        <br>
+
+                        Ap bas larkiyan thori dekhain
+                        to ap or axhy ho skty
+                        <br>
+
+                        Zara dantain kam to or bhi zyada ho skty
+                        <br>
+
+                        Tyar hoke office nah jain to oyy hoyy tabahi ho jain gy
+                        <br>
+
+                        I think itni kafi hai tareef apky lie hihihi!
+                        <br><br>
+
+                        Ni yawr ap bht axhy hainn itna dantny ke bad bhi ap axhy hain lkin phir bhi me zyada axhi hun:)
+                        <br>
+
+                        Pata Apse mera sab match hotaaa height ko
+                        chor ke. Me kabhi apki life me hun ya nah hun I wish Apko sab kuch zyada zyada mily
+                        (Larkiyan chor ke). Khoob taraki krein or apny maa baap ka nam roshan krein jaise mein krti Ahmmm.
+                        Ap itny axhy hain ke apki tareef me shabd he ni!
+                    </p>
+
+
+                    <p>
+                        Pata hai mjhy ap pe poora bharosa hai khud se bhi zyada bharosa hai mjhy ap pe
+                        Lakin Phir bhi shak me poora karoungi
+                        <br>
+
+                        <strong>Ladies hun naaw</strong>
+                    </p>
+
+
+                    <p>
+                        <br>
+
+                        "🦋🌙رُوحِ مَن"
+
+                        <br>
+
+                        Hamesha khush rahain. Hansty muskuraty rahain. Sada suhagan rahain.
+                        meri shubkamnain apky sath hainnn. Khoob taraki krein.
+                        Hamesha chamakty dhamakty lashkary marty rahain.
+                        Allah Pak apko dheer sari khushiyan dein.
+                        Lakin agar apki khushi <strong>4</strong> shadiyon mein hai to rehn dein ap aese he sae hain!
+                        Wese mjhy pata hai ap  <strong>4</strong>shadiyan nahi krein gy srf cheerty hain lakin me chir jati hun!
+                    </p>
+
+
+                    <p>
+                        Me chahti hum hamesha sath rahain hansty, larty jhagarty, aik dsre ko manaty,
+                        aik dsre ki bat man ke, aik dsre ko priority de ke, aik dsre ko smjha kar
+                        or aik dsre pe haq jitaty huy! hum me chahy lakh laraiyan hi kyun nah ho
+                        but har larai ka solution nikal lein.
+                        I want us to always stay together, keep growing together, and create countless beautiful memories.
+                        Because memories are forever🩷
+                    </p>
+
+
+                    <p>
+                        <br>
+                        Arz kiya hai
+                        <br>
+                        محترم
+                        <br>
+                        محبت میں انائیں کیسی؟
+                        <br>
+                        کبھی میں صحیح آپ غلط ، کبھی آپ غلط میں صحیح۔
+                    </p>
+
+
+                    <p>
+                        Agar ap is quote ko apni life me hamesha yaad rkhain gy to dekhnaa
+                        kaise hum dono khush rahain gy InshaAllah!
+                    </p>
+
+
+                    <br>
+
+                    <p style="text-align: center; font-size:large;">
+                        ♡
+                    </p>
+
+
+ 
+
+                    <p>
+                        <br>
+
+                        ♡أنت حبيب روحي
+                        <br>
+
+                        You are the love of my soul.🤍
+                    </p>
+
+                    <p>
+                        Wese jitni mene apki tareefain kar dein hain apko chahiye din, raat, sbha, dophair,
+                        shaam time se <strong>2-2</strong> nafal parhain shukrany ke.
+                        Ky me apki zindagi me ayee warna ghoom rhy hoty kisi chapri ke sath!
+                        Ya koi milti apko <strong>Sana shapatri</strong> ya <strong>Saimaa Easy Load Wali</strong>
+                        jo har dsre din apse balance mangwati hihihi.
+                        Mazak kar rhi hun naseeb me likhi hui museebatein mil ke he rehti hain
+                        chahy insaan kitna he door kyun nah bhaag jayeee
+                        (Ni me apko musibat ni keh rhi).
+                        Ye meri tareef thi.
+                        <strong>Huzurum,</strong>
+                        Beshak ap har waqt isi koshish me hoty hain ke mein koi glti karoun
+                        or ap mjhy lapatain lakin phir bhi me chahti ap ye zindagi mery sath guzarain
+                        obv jitni lvl tea me deti naah apko end hai qsmy.
+                        Jis din ap larein naah mera BP low ho jata.
+                        Apky sath pangy karny ka alag he maza hai 
+                        <strong>OR Most Importantly</strong>
+                        ap koi kam krny ko bolain to uspe nahi karna mera faraz hai
+                        (Bad me chahy han kar dun) lakin sb se phly nahi he ayegaaaa
+                        <strong>(Ladies hun naaw)</strong> <br>
+                        Or naah bhala kya apni choti choti khusriyon ko bolain door rahain
+                        warna me in saaliyon ki gudiya bana deni. <br>
+                        Kabhi koi mshkil aye to me hamesha apky sath hun mjhse opinion le lena
+                        mazeed fielding set ho jayegi apki.
+                        Ap khush rhain lakin srf mery sath baqi kisi ko agar ap dekh ke hansain
+                        to Allah kar ke uska baap bhai apko dekh le Ameeennnnnn.
+
+                        <br>
+
+                        HAPPY 26th BIRTHDAY TO MY PARTNER!
+                        My Labubu, My love, My Person, My Babe, Mine Moon, My Soul,
+                        Mine Swan, Mwaah Mwaah, A million extra wishes for youuuuu.
+                        You are so special🦢
+
+                        <br>
+
+                        Just wanna remind you that
+                        <br>
+
+                      <strong> I love you so much🌸</strong> 
+
+                        <br>
+
+                        No one can replace you.
+                        <br>
+
+                        اور میرے لیے کوئی بھی شخص تم جیسا نہیں ہو سکتا
+
+                        <br><br>
+
+                        I may not tell you everyday that you mean the world to me but you do.
+                        The day you stepped into my life you changed it into something so beautiful and meaningful.
+                        I may not be the first woman in your life but I want to be the last woman you everloved.
+                        I may not be the first woman to make you feel loved but I want to be the only one
+                        to make you feel loved to the core ♥
+                        <br>
+
+                        I choose you. And I’ll choose you, over and over and over.
+                        Without pause, without a doubt, in a heartbeat.
+                        I’ll keep choosing you forever.
+                        I love you more than our fights, arguments, silly talks and mood swings.
+                        I want to see you achieve everything you've ever told me,
+                        even if I am not there🫶🏻.
+
+                        <br>
+
+                        Whether I’m in your life or not, please always take really good care of yourself, okieee? 🥺🤍
+
+                        OR apna promise bhi hamesha yaad rkhnaaa haii ke ap ainda cigarettes nahi piyein gy
+                        agar apny kbhi cigarettes ko mun lagayaaa to Allah kar ke koi masjid ke bahir se
+                        apki joota chupai ki rasam kar jaye AMEEENNN SUMAMEEENNNN!
+
+                        <br>
+
+                        Btw me emotions express krny me shyd itni axhi ni hun
+                        but jahan tk smjh aye mene kar deyaa kyunky apki birthday thi naah.
+                        Ab mery ik ikloty, pyary, wafadaar, or mukhlis bandy ka birthday tha
+                        to itna toh me kar skti thi naah🌷
+
+                        <br>
+
+                        Dekhain apse koi larki aese muhabbat ni kar payegi jaise me krti hun!
+                        Ab isko srf bat he rehny dena check krny ni lag jana ke koi lrki aese muhabbat karti hai
+                        ke ni me tangain tor deni apki.
+
+
+                        <br> <br> Or ap kya kehty me apse tang a jaongi, me boloun gi ap pabandiyan lagaty ye hai wo hai to remember Ye sab kabhi ni hogaa ap pabandi lagain gy me double laga dungi buhahaha business :)<br> Ap larki ke chakkar me jain gy me apki mundi tor dungi.
+                        <br> Ap mjhy tang krein gy me double kar lon gi
+                        <br> Most importantly ap koi glti krein me apko kuch ni boloun gi jaise ke ap khana banain gy me chup chaap kha lon gi or agar khany me kbhi namak zyada hogyaa me apki kutt ni lagaoun gi Okieeee?
+
+                        <br> <br>
+                    "Wese mjhy ap toh psnd hain he hainnn lakin apki ik cheez jo meri most favorite hai mtlb tabahi cheez hai wo apki , wo hai apki bandi mtlb yar dekhain kitni tabahi bandi hai apki awhhhhh mashaAllah! Ni mtlb kahan se milegi apko aese bandi kyunky me to limited edition hun boss:) Oppsss!"
+
+                        
+                        <br><br> 
+                        You are mine, basically, physically, emotionally, mentally, officially and unofficially — basically the whole package. No refunds, no exchanges, no returns accepted. You’re officially stuck with me now, so please cooperate peacefully. Thank you.😂🤎
+
+                       <p>
+
+                        <p>
+                        <br>
+                        🌷أنا أحبك
+                    </p>
+
+    <br><br>
+
+    <p>Mene apse kuch pics le thin jo meri most favorite hain🥹🤎 </p>
+
+</p>
+
+
+<!-- =====================================================
+     A LITTLE BOX OF MEMORIES
+===================================================== -->
+
+<div class="letter-memory-box">
+
+    <div class="memory-intro">
+
+        <button
+            class="open-memories-btn"
+            onclick="openMemories()">
+
+            Abhi toh mera favourite part baaki hai🧸
+
+        </button>
+
+    </div>
+
+
+    <!-- MEMORY VIEWER -->
+
+    <div
+        class="memory-viewer"
+        id="memoryViewer">
+
+        <button
+            class="memory-close"
+            onclick="closeMemories()">
+
+            ×
+
+        </button>
+
+
+        <div
+            class="memory-number"
+            id="memoryNumber">
+
+            01 / 25
+
+        </div>
+
+
+       <div class="memory-photo">
+    <img
+        id="memoryImage"
+        src="images/memory1.jpg"
+        alt="Memory"
+    >
+
+    <video
+        id="memoryVideo"
+        muted
+        controls
+        playsinline
+        style="display: none;">
+    </video>
+</div>
+
+
+        <p
+            class="memory-caption"
+            id="memoryCaption">
+
+
+        </p>
+
+
+        <div class="memory-controls">
+
+            <button
+                class="memory-prev"
+                onclick="previousMemory()">
+
+                ←
+
+            </button>
+
+
+            <button
+                class="memory-next"
+                onclick="nextMemory()">
+
+                " Keep going ♡ "
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+    
+<!-- LITTLE HEART BREAK -->
+
+<div class="little-heart-break">
+
+    <span class="heart-line"></span>
+
+    <div class="heart-break-content">
+        <span class="tiny-heart-deco">✧</span>
+
+        <p class="heart-break-title">
+            And there's a little more
+        </p>
+
+        <span class="heart-break-subtitle">
+            Because some feelings deserve their own little page
+        </span>
+    </div>
+
+    <span class="heart-line"></span>
+
+</div>
+
+<!-- =====================================================
+     FLIP MEMORY CARD
+===================================================== -->
+
+<div class="flip-memory">
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+
+        <!-- FRONT: PICTURE -->
+        <div class="flip-front">
+            <img src="images/us.png" alt="A little memory">
+
+            <div class="tap-text">
+                tap to turn the page ♡
+            </div>
+        </div>
+
+        <!-- BACK: NOTE -->
+        <div class="flip-back">
+
+            <div class="note-paper">
+<!-- 
+                <span class="tiny-heart">♡</span> -->
+
+                <p>
+                   OKAY! Apny mjhy bola tha me apko chor dungi , chali jaoun gi or mene bola tha apko bataoun gi ap mery lie kya hain.Ap mery lie bht important hain shyd jitna me kehti hun usse bhi zyada. Haziq apky lie to me <strong>Surf Excel </strong>or<strong> Bonus</strong> bhi khaa skti hun! Itny qeemti hain ap mjhy! Khair mazak ke ilawa me apko share ni kr skti! Zara sa bhi ni! <strong> Ap mery hain srf or srf mery</strong> "Mene apka lifetime package le liya hai🧸"
+
+                    <br><br>
+                     اور آپ سے زیادہ عزیز میں نے کسی کو رکھا ہی نہیں🎀۔ 
+                </p>
+
+                <span class="note-sign">
+                    _You’ll have to love only me, forever🩷
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<p>
+
+    <br> <br>
+    Wese to mjhy pata ap larkiyan ni dekhtyy lakin kisi din mene dekhty pakar leyaa naah us din apni khair mananaaa.  <br>
+    Wese ye me likhnaa ni chah rhi thii lakin bhala kya mjhyy ladies wali feel ni a rhien thii , you know dhamki ke bgair maza ni ataaaa. Wese ye dhamki to ni hai sach bhi ho skta hai agar apki ankhain ghumien ider uder mene apko ghumaa denaa.  
+    <br>
+   <strong>To Satark Rahain , Hoshiyar Rahainnn <br>
+    Or apni cheezon ki khud hifazat krein!  </strong>
+    
+    <br> <br>
+
+    Abhi bhi keh rhi hun qadar kar lein meri, awain ghum shum ho gaii to peechy ronaa nai phir "Wo siyany kehty nah ab kya faida jab chiryaaa chug gai kheet!" To meri baat suna karein or larkiyon se 210 qadam door raha kreinnn  Warnaaa kachumar nikal dungi or Apni shirt ke buttons band rkhaa krein or Mery se zara dar ke raha krein or Meri baat pe jee malkin kaha krein or <strong>4</strong> shadiyon ke khuwab dekhnaa chor dein ni to ticket kaat dungi apki. Baqi time ke sath sath batati jaon gi ap bas jee jee krty rehnaa. Bas kafi hai itnaaa me srf itny me he khush hunnn Ahmmmm! 
+
+
+
+    
+
+    <br><br>
+
+    "In the middle of all my chaos, somehow, there's always YOU"🥹🩷
+    <br>~Dekhain letter ka end cute bat keh ke kiyaa dhamkiyan ni lagai mein!
+
+    <br><br>
+
+    Just consider this a <strong>vintage letter</strong>, okayyy?✉️
+
+    <br><br>
+
+    Lastly!
+
+    <br>
+
+    🧸زه تا سره مینه کوم
+
+</p>
+
+                    <div class="letter-sign">
+
+                        Forever rooting for you,
+
+                        <strong>
+                            ~Azizam!
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             FINAL SURPRISE
+        ===================================================== -->
+
+        <section class="final1" id="final1">
+
+            <div class="final1-stars"></div>
+
+            <div class="final1-content">
+
+                <p class="eyebrow">
+                    IF YOU EVER FORGET
+                </p>
+
+                <h2>
+                    Haziq,
+                    <br>
+                    you are
+                    <em>precious.</em>
+                </h2>
+
+                <p class="final1-message">
+                    More than this little website could ever explain.
+                </p>
+
+                <div class="final1-names">
+                    HAZIQ
+                    <span>×</span>
+                    WANIYA
+                </div>
+
+                <button class="forever-btn">
+                    AND IT KEEPS BEING YOU ♡
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+            <span>H</span>
+        </div>
+
+        <p>
+            Made with love, especially for Haziq.
+        </p>
+
+        <small>
+            From Yours Azizam.
+        </small>
+
+    </footer>
+
+
+    <script>
+
+        /* =====================================================
+           WEBSITE ENTRY
+        ===================================================== */
+
+        function enterWebsite() {
+
+            const intro = document.getElementById("intro");
+
+            if (intro) {
+                intro.classList.add("hide");
+            }
+
+            document.body.classList.remove("locked");
+
+            setTimeout(() => {
+                createParticles();
+            }, 500);
+
+        }
+
+
+        /* =====================================================
+           PARTICLES
+        ===================================================== */
+
+        function createParticles() {
+
+            const container = document.getElementById("particles");
+
+            if (!container) return;
+
+            if (container.children.length > 0) return;
+
+            for (let i = 0; i < 70; i++) {
+
+                const particle = document.createElement("div");
+
+                particle.className = "particle";
+
+                particle.style.left =
+                    Math.random() * 100 + "%";
+
+                particle.style.top =
+                    Math.random() * 100 + "%";
+
+                particle.style.opacity =
+                    Math.random() * 0.7;
+
+                particle.style.animationDuration =
+                    5 + Math.random() * 10 + "s";
+
+                particle.style.animationDelay =
+                    Math.random() * 5 + "s";
+
+                container.appendChild(particle);
+
+            }
+
+        }
+
+
+        /* =====================================================
+           MUSIC
+        ===================================================== */
+
+        const music =
+            document.getElementById("music");
+
+        const musicControl =
+            document.getElementById("musicControl");
+
+        let playing = false;
+
+
+        if (music && musicControl) {
+
+            musicControl.addEventListener("click", () => {
+
+                if (!playing) {
+
+                    music.play()
+                        .then(() => {
+
+                            playing = true;
+
+                            musicControl.classList.add("playing");
+
+                        })
+                        .catch(() => {
+
+                            alert(
+                                "Please make sure images/sound.mp3 exists."
+                            );
+
+                        });
+
+                } else {
+
+                    music.pause();
+
+                    playing = false;
+
+                    musicControl.classList.remove("playing");
+
+                }
+
+            });
+
+        }
+
+
+        /* =====================================================
+           PICTURE LIGHTBOX
+        ===================================================== */
+
+        function openPicture(imageSrc) {
+
+            const lightbox =
+                document.getElementById("pictureLightbox");
+
+            const bigPicture =
+                document.getElementById("bigPicture");
+
+            if (!lightbox || !bigPicture) return;
+
+            bigPicture.src = imageSrc;
+
+            lightbox.classList.add("active");
+
+            document.body.classList.add("locked");
+
+        }
+
+
+        function closePicture() {
+
+            const lightbox =
+                document.getElementById("pictureLightbox");
+
+            if (!lightbox) return;
+
+            lightbox.classList.remove("active");
+
+            document.body.classList.remove("locked");
+
+        }
+
+
+        /* =====================================================
+           VIDEO CONTROLS
+        ===================================================== */
+
+        const updatesVideo =
+            document.getElementById("updatesVideo");
+
+        const outfitVideo =
+            document.getElementById("outfitVideo");
+
+        const confessionVideo =
+            document.getElementById("confessionVideo");
+
+
+        /* -----------------------------------------------------
+           UPDATES VIDEO
+           Click = Play / Pause
+        ----------------------------------------------------- */
+
+        if (updatesVideo) {
+
+            updatesVideo.addEventListener("click", () => {
+
+                if (updatesVideo.paused) {
+
+                    updatesVideo.play()
+                        .catch(() => {});
+
+                } else {
+
+                    updatesVideo.pause();
+
+                }
+
+            });
+
+        }
+
+
+        /* -----------------------------------------------------
+           OUTFIT VIDEO
+           Click = Play / Pause
+           Playing = Background music 15%
+        ----------------------------------------------------- */
+
+        if (outfitVideo) {
+
+            outfitVideo.addEventListener("click", () => {
+
+                if (outfitVideo.paused) {
+
+                    outfitVideo.play()
+                        .then(() => {
+
+                            if (music) {
+                                music.volume = 0.15;
+                            }
+
+                        })
+                        .catch(() => {});
+
+                } else {
+
+                    outfitVideo.pause();
+
+                    if (music) {
+                        music.volume = 1;
+                    }
+
+                }
+
+            });
+
+
+            outfitVideo.addEventListener("pause", () => {
+
+                if (music) {
+                    music.volume = 1;
+                }
+
+            });
+
+
+            outfitVideo.addEventListener("ended", () => {
+
+                if (music) {
+                    music.volume = 1;
+                }
+
+            });
+
+        }
+
+
+        /* -----------------------------------------------------
+           CONFESSION VIDEO
+           Click = Play / Pause
+        ----------------------------------------------------- */
+if (confessionVideo) {
+
+    confessionVideo.addEventListener("click", () => {
+
+        if (confessionVideo.paused) {
+
+            confessionVideo.play()
+                .then(() => {
+
+                    // Background music slow
+                    if (music) {
+                        music.volume = 0.05;
+                    }
+
+                })
+                .catch(() => {});
+
+        } else {
+
+            confessionVideo.pause();
+
+            // Background music normal
+            if (music) {
+                music.volume = 1;
+            }
+
+        }
+
+    });
+
+
+    // If confession video is paused by any other method
+    confessionVideo.addEventListener("pause", () => {
+
+        if (music) {
+            music.volume = 1;
+        }
+
+    });
+
+
+    // When confession video finishes
+    confessionVideo.addEventListener("ended", () => {
+
+        if (music) {
+            music.volume = 1;
+        }
+
+    });
+
+}
+
+        /* =====================================================
+           LETTER
+        ===================================================== */
+
+        function openLetter() {
+
+            const envelope =
+                document.querySelector(".letter-envelope");
+
+            const modal =
+                document.getElementById("letterModal");
+
+            if (!envelope || !modal) return;
+
+            envelope.classList.add("open");
+
+            setTimeout(() => {
+
+                modal.classList.add("show");
+
+                document.body.classList.add("locked");
+
+            }, 500);
+
+        }
+
+
+        function closeLetter() {
+
+            const modal =
+                document.getElementById("letterModal");
+
+            const envelope =
+                document.querySelector(".letter-envelope");
+
+            if (modal) {
+                modal.classList.remove("show");
+            }
+
+            if (envelope) {
+                envelope.classList.remove("open");
+            }
+
+            document.body.classList.remove("locked");
+
+        }
+
+
+        /* =====================================================
+           CLOSE LETTER ON BACKDROP
+        ===================================================== */
+
+        const letterModal =
+            document.getElementById("letterModal");
+
+        if (letterModal) {
+
+            letterModal.addEventListener(
+                "click",
+                function(event) {
+
+                    if (event.target === this) {
+
+                        closeLetter();
+
+                    }
+
+                }
+            );
+
+        }
+
+
+        /* =====================================================
+           VOICE NOTE
+        ===================================================== */
+
+        const voiceNote =
+            document.getElementById("voiceNote");
+
+        const voicePlayBtn =
+            document.getElementById("voicePlayBtn");
+
+
+        if (voiceNote && voicePlayBtn) {
+
+            voicePlayBtn.addEventListener("click", () => {
+
+                if (voiceNote.paused) {
+
+                    voiceNote.play()
+                        .then(() => {
+
+                            voicePlayBtn.innerHTML = "❚❚";
+
+                        })
+                        .catch(() => {
+
+                            alert(
+                                "Please make sure images/voice-note.mp3 exists."
+                            );
+
+                        });
+
+                } else {
+
+                    voiceNote.pause();
+
+                    voicePlayBtn.innerHTML = "▶";
+
+                }
+
+            });
+
+
+            voiceNote.addEventListener("ended", () => {
+
+                voicePlayBtn.innerHTML = "▶";
+
+            });
+
+        }
+
+
+        /* =====================================================
+           ESCAPE KEY
+        ===================================================== */
+
+        document.addEventListener("keydown", event => {
+
+            if (event.key === "Escape") {
+
+                closeLetter();
+                closePicture();
+
+            }
+
+        });
+
+
+        /* =====================================================
+           GIFT
+        ===================================================== */
+
+        function showGift() {
+
+            const image =
+                document.getElementById("giftImage");
+
+            if (!image) return;
+
+            image.classList.toggle("show");
+
+        }
+
+
+        /* =====================================================
+           REVEAL ANIMATION ON SCROLL
+        ===================================================== */
+
+        const observer =
+            new IntersectionObserver(
+                entries => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.style.opacity = "1";
+
+                            entry.target.style.transform =
+                                "translateY(0)";
+
+                            observer.unobserve(entry.target);
+
+                        }
+
+                    });
+
+                },
+                {
+                    threshold: .15
+                }
+            );
+
+
+        document
+            .querySelectorAll(
+                ".timeline-item, .photo, .opening-content"
+            )
+            .forEach(element => {
+
+                element.style.opacity = "0";
+
+                element.style.transform =
+                    "translateY(40px)";
+
+                element.style.transition =
+                    "opacity 1s ease, transform 1s ease";
+
+                observer.observe(element);
+
+            });
+
+
+        /* =====================================================
+           CLOSE PICTURE LIGHTBOX WHEN CLICKING BACKDROP
+        ===================================================== */
+
+        const pictureLightbox =
+            document.getElementById("pictureLightbox");
+
+        if (pictureLightbox) {
+
+            pictureLightbox.addEventListener(
+                "click",
+                function(event) {
+
+                    if (event.target === this) {
+                        closePicture();
+                    }
+
+                }
+            );
+
+        }
+        // ------------------------------
+
+        /* =====================================================
+   MEMORY BOX
+===================================================== */
+
+const memories = [
+
+    {
+        image: "images/1.jpeg",
+        caption: "Dekhain axhi wali lagai"
+    },
+
+    {
+    video: "images/21.mp4",
+    caption: "Aryyy baby chalo clapping kar ke dikhao:)"
+},
+
+    {
+        image: "images/2.jpeg",
+        caption: "Awhh prewtty little baby!"
+    },
+
+    {
+        image: "images/3.jpeg",
+        caption: "Allah Allah ye kya dekh liya!"
+    },
+
+    {
+        image: "images/4.jpeg",
+        caption: "Idk why, but ye bht lvl hai♡"
+    },
+
+    {
+        image: "images/5.jpeg",
+        caption:"Ufff meri LAILAA!🤎"
+    },
+
+    {
+        image: "images/6.jpeg",
+        caption: "Ider toh dekhooo"
+    },
+
+    {
+        image: "images/7.jpeg",
+        caption: "Hann dekhaa mera kitna kehnaa manty GOOD BOY!"
+    },
+
+    {
+        image: "images/11.jpeg",
+        caption: "Ohhh Okiee Haziq!"
+    },
+
+    {
+        image: "images/8.jpeg",
+        caption: "Ohhhhh something something!"
+    },
+
+    {
+        video: "images/27.mp4",
+        caption: "My Personal Fit Check Provider Mwaah!"
+    },
+
+    {
+        image: "images/9.jpeg",
+        caption: "Me to ABDUL BARI hun '(Me toh axha bacha hun)'"
+    },
+
+    {
+        image: "images/22.jpeg",
+        caption: "My White🧸"
+    },
+
+    {
+    video: "images/1.mp4",
+    caption: "Okay This is so good!"
+},
+
+    {
+        image: "images/10.jpeg",
+        caption: "Sae hai Gussa kyun ho rhyy?"
+    },
+
+    
+    {
+        image: "images/12.jpeg",
+        caption: "Aese ni dekhain Pyar ho jaigaa Ahmm!"
+    },
+
+    {
+        image: "images/14.jpeg",
+        caption: "Wese hain to pyary "
+    },
+
+    {
+    video: "images/15.mp4",
+    caption: "Baaz a jain. Fyr kehtyyy me larti 'iykyk'"
+},
+
+{
+        image: "images/13.jpeg",
+        caption: "Axhaaaaaa jeeeeee, Aesa hai kyaaa?"
+    },
+
+{
+    image: "images/17.jpeg",
+    caption: "Ohhh Haziq! Bas End"
+},
+
+{
+    video: "images/28.mp4",
+    caption: "MINE:)"
+},
+{
+  image: "images/23.jpeg",
+  caption: "Infact, ONLY MINE!🤎"
+},
+
+{
+    image: "images/18.jpeg",
+    caption: "Ap bilkul mery jaise hain 'masoom se'"
+},
+
+{
+    video: "images/19.mp4",
+    caption: "OHH MY YESS!"
+},
+
+{
+    image: "images/20.jpeg",
+    caption: "Ab itni masoom shkl banain gy to me kaise kutton gi?"
+}
+
+];
+
+let currentMemory = 0;
+
+
+function openMemories() {
+    document.getElementById("memoryViewer").classList.add("active");
+    showMemory(0);
+}
+
+
+function closeMemories() {
+    document.getElementById("memoryViewer").classList.remove("active");
+
+    const video = document.getElementById("memoryVideo");
+
+    if (video) {
+        video.pause();
+    }
+}
+
+
+function showMemory(index) {
+
+    currentMemory = index;
+
+    const image = document.getElementById("memoryImage");
+    const video = document.getElementById("memoryVideo");
+
+    const caption = document.getElementById("memoryCaption");
+    const number = document.getElementById("memoryNumber");
+
+    const memory = memories[index];
+
+
+    /* VIDEO */
+    if (memory.video) {
+
+        image.style.display = "none";
+
+        video.style.display = "block";
+
+        video.src = memory.video;
+
+        video.load();
+
+    }
+
+    /* IMAGE */
+    else {
+
+        video.pause();
+
+        video.removeAttribute("src");
+
+        video.style.display = "none";
+
+        image.style.display = "block";
+
+        image.src = memory.image;
+    }
+
+
+    caption.textContent = memory.caption;
+
+    number.textContent =
+        String(index + 1).padStart(2, "0") + " / 25";
+}
+
+
+function nextMemory() {
+
+    if (currentMemory < memories.length - 1) {
+
+        showMemory(currentMemory + 1);
+
+    }
+
+}
+
+
+function previousMemory() {
+
+    if (currentMemory > 0) {
+
+        showMemory(currentMemory - 1);
+
+    }
+
+}
+
+onclick="this.classList.toggle('flipped')"
+
+    </script>
+
+</body>
+</html>
